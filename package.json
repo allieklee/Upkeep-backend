@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "express backend for Upkeep MTG app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allieklee/Upkeep.git#backend"
+  },
+  "author": "Allison Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allieklee/Upkeep/issues"
+  },
+  "homepage": "https://github.com/allieklee/Upkeep/tree/backend#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
