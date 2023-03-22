@@ -22,7 +22,6 @@ app.use(cors(corsOptions));
 
 app.get('/api/searchCards', async (req, res) => {
   const name = req.query.name;
-
   try {
     const response = await axios.get('https://api.scryfall.com/cards/search', {
       params: {
