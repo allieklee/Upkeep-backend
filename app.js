@@ -11,6 +11,15 @@ const qs = require('querystring');
 
 const app = express();
 
+const cors = require('cors')
+
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
+}
+app.use(cors(corsOptions));
+
+
 app.get('/api/searchCards', async (req, res) => {
   const name = req.query.name;
 
@@ -34,10 +43,10 @@ app.get('/api/searchCards', async (req, res) => {
     res.json(cards);
   } catch (error) {
     console.error(error);
-    res.status(500).send('Server error');
+    res.status(500).send('Server-error');
   }
 });
 
-app.listen(5000, () => {
-  console.log('Server started on port 5000');
+app.listen(3001, () => {
+  console.log('Server started on port 3001');
 });
